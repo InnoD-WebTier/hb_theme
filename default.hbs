@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid hb-navbar-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="navbar-logo-text">hb.</span>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="nav-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" id="nav-menu-home">Home</a></li>
+                    <li><a href="#" id="nav-menu-about">About</a></li>
+                    <li><a href="#" id="nav-menu-issues">Issues</a></li>
+                    <li><a href="#" id="nav-menu-other">Other Blogs</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+    <footer class="footer">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="row">
+                <div class="footer-section hb-footer-link pull-left">{{@blog.title}}</div>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="row">
+                <div class="footer-section hb-footer-contact">hardboiledmagazine@gmail.com</div>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="row">
+                <div class="footer-section">
+                    Hello
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for Hardboiled }}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/bootstrap.js"}}"></script>
+
+</body>
+</html>
