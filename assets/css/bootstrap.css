@@ -1423,7 +1423,7 @@ hr {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: transparent;
+  background-color: white;
 }
 .navbar-default .navbar-collapse {
   border-color: #eeeeee;
