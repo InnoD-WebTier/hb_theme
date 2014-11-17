@@ -18,7 +18,14 @@
         </header>
 
         <section class="post-content">
-            {{content}}
+          <ul>
+            {{#foreach articles}}
+            <li>
+              <a href="{{@blog.url}}/article/{{slug}}">{{title}}</a>
+            </li>
+            {{/foreach}}
+          </ul>
+          <a href="{{@blur.url}}/issues/">Back To Issue List</a>
         </section>
 
         <footer class="post-footer">
