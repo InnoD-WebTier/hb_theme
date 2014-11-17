@@ -1,0 +1,16 @@
+{{! This is the issue loop - each issue will be output using this markup }}
+{{#foreach issues}}
+<article>
+    <header class="post-header">
+        <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+    </header>
+    <div class="post-meta">
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MM/DD/YYYY"}}</time>
+    </div>
+    {{! TODO: issue image }}
+</article>
+{{/foreach}}
+
+{{#foreach publish_years}}
+  <a href="{{@blog.url}}/issues/{{this}}">{{this}}</a>
+{{/foreach}}
