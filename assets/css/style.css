@@ -10,7 +10,15 @@
   }
 }
 .hb-navbar-container {
+  border: none;
   border-bottom: 1px solid #00aaf2;
+}
+.hb-navbar-nav {
+  text-transform: lowercase;
+}
+.hb-navbar-brand {
+  line-height: inherit;
+  font-weight: bold;
 }
 .navbar-logo-text {
   left: 15px;
@@ -82,6 +90,8 @@
 .hb-footer-link {
   margin: 1.25em 0 1.25em 1.75em;
   font-size: 1.5em; 
+  font-weight: bold;
+  text-transform: lowercase;
 }
 .hb-footer-contact {
   margin: 3em 0;
@@ -96,6 +106,10 @@
   color: white;
   cursor: pointer;
 }
+.nav-padding {
+  height: 50px;
+}
+
 /*-----index.hbs-------------------------------------------------------------*/
 .main-header {
   height: 15em;
@@ -109,6 +123,7 @@
   color: #00aaf2;
   font-size: 5em;
   line-height: 1em;
+  text-transform: lowercase;
 }
 .page-description {
   display: block;
@@ -117,6 +132,8 @@
   font-size: 13px;
   font-weight: 300;
   text-transform: lowercase;
+}
+@media (min-width: 950px) {
 }
 @media (min-width: 768px) {
   .post-feed {
