@@ -16,29 +16,18 @@
 <main id="content" class="content" role="main">
 
     <div class="row">
-        <div class="col-sm-8 col-md-8 col-lg-8 post-feed">
-            <div class="row">
-                {{! The tag below includes the issue loop - partials/issue_loop.hbs }}
+        <div class="col-sm-2 col-md-2 col-lg-2">
+          {{#foreach publish_years}}
+             <a class="year-tab" href="{{@blog.url}}/issues/{{this}}">{{this}}</a>
+          {{/foreach}}
+        </div>
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="row issues-box">
                 {{#foreach issues}}
-                <article>
-                    <header class="post-header">
-                        <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
-                    </header>
-                    <div class="post-meta">
-                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MM/DD/YYYY"}}</time>
-                    </div>
-                    {{! TODO: issue image }}
+                <article class="article">>
+                    <h2 class="issue-title"><a href="{{url}}">{{title}}</a></h2>
                 </article>
                 {{/foreach}}
-
-                {{#foreach publish_years}}
-                  <a href="{{@blog.url}}/issues/{{this}}">{{this}}</a>
-                {{/foreach}}
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4 sidebar">
-            <div class="row">
-                {{> "sidebar"}}
             </div>
         </div>
     </div>
