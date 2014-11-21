@@ -1,0 +1,138 @@
+@import "slick";
+@import "hb_vars";
+
+/*-----default.hbs-----------------------------------------------------------*/
+.content {
+  max-width: $content-width;
+  margin: 0 30px;
+
+}
+@media(min-width: 1052px) {
+  .content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.hb-navbar-container {
+  border-bottom: 1px solid $hb-blue;
+}
+.navbar-logo-text {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  color: $hb-white;
+}
+@media (min-width: 768px) {
+  .hb-navbar-container {
+    padding: 0 10px;
+  }
+}
+.navbar-brand {
+  background: $hb-blue;
+  width: 50px;
+}
+@media (max-width: 768px) {
+  .navbar-brand {
+    width: 100%;
+  }
+}
+.footer {
+  width: 100%;
+  height: 6em;
+  background: $hb-blue;
+}
+.footer-section {
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+.hb-footer-link {
+  margin: 1.25em 0 1.25em 1.75em;
+  font-size: 1.5em; 
+}
+.hb-footer-contact {
+  margin: 3em 0;
+  font-size: 0.8em;
+}
+/*-----index.hbs-------------------------------------------------------------*/
+.main-header {
+  height: 15em;
+  width: 100%;
+  text-align: center;
+}
+.page-title {
+  display: block;
+  margin: 0;
+  padding-top: 0.75em;
+  color: $hb-blue;
+  font-size: 5em;
+  line-height: 1em;
+}
+.page-description {
+  display: block;
+  margin: 0;
+  color: $gray-light;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+@media (min-width: 768px) {
+  .post-feed {
+    padding-right: 20px;
+  }
+  .sidebar {
+    padding-left: 20px;
+  }
+}
+/*-----loop.hbs--------------------------------------------------------------*/
+.post {
+  padding: 25px 0;
+  border-bottom: 1px solid $hb-blue;
+}
+.post-header {
+  display: block;
+}
+.post-title {
+  margin: 0px;
+  max-width: 80%;
+}
+.post-title > a {
+  color: $black;
+  font-size: 25px;
+}
+.post-meta {
+  margin: 11px 0;
+  font-size: 10px;
+}
+.post-meta > a {
+  color: $black;
+}
+.post-excerpt {
+  font-size: 13px;
+}
+/*-----pagination------------------------------------------------------------*/
+.pagination {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+.page-number {
+  color: $gray-light;
+  font-size: 10px;
+}
+.pagination > a {
+  color: $gray-light;
+  font-size: 10px;
+  padding: 7px;
+  border: 1px solid $hb-blue;
+  border-radius: 5px;
+  top: 14px;
+}
+.older-posts {
+  position: absolute;
+  right: 20px;
+}
+.newer-posts {
+  position: absolute;
+  left: 20px;
+}
