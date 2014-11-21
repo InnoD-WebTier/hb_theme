@@ -30,14 +30,14 @@
         </section>
 
         <footer class="post-footer">
-            
+
 
         {{! Everything inside the #author tags pulls data from the author }}
         {{#author}}
 
             {{#if image}}
             <figure class="author-image">
-                <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                <a class="img" href="{{url}}" style="background-image: url({{@blog.url}}{{image}})"><span class="hidden">{{name}}'s Picture</span></a>
             </figure>
             {{/if}}
 
