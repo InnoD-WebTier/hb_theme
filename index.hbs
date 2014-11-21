@@ -13,27 +13,7 @@
 
 
     <div class="row">
-        <div class="carousel-container">
-            <div class="carousel-arrow left"><</div>
-            <div class="carousel-arrow right">></div>
-        </div>
-    </div>
-    <div class="row">
         <div class="col-sm-8 col-md-8 col-lg-8 post-feed">
-            <div class="row">
-                <article class="post featured">
-                    <header class="post-header featured">
-                        <h2 class="post-title featured"><a href="#">This is a long title for testing</a></h2>
-                    </header>
-                    <div class="post-meta">
-                        Jon Lai | 
-                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">11/06/2014</time>
-                    </div>
-                    <section class="post-excerpt">
-                        <p>You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at <your blog URL>/ghost/. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section! Getting Started Ghost uses something called Markdown for writing. Essentially, it's a shorthand way to manage your post <a class="read-more" href="#">&raquo;</a></p>
-                    </section>
-                </article>
-            </div>
             <div class="row">
                 {{! The tag below includes the post loop - partials/loop.hbs }}
                 {{> "loop"}}
