@@ -1,0 +1,51 @@
+.year-tab {
+  display: block;
+  width: 60%;
+  padding: 10px 0;;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00aaf2;
+  border: solid 1px #00aaf2;
+  border-right: none;
+  margin: 20px 0 20px 40%;
+}
+.year-tab:hover {
+  text-decoration: none;
+}
+.year-tab.active {
+  color: white;
+  background: #00aaf2;
+}
+.issues-box {
+  border: solid 1px #00aaf2;
+  padding: 25px 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+.issue-wrapper {
+  width: 49%;
+}
+@media(max-width: 768px) {
+  .issue-wrapper {
+    width: 100%;
+  }
+}
+.issue-title {
+  display: block;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #00aaf2;
+}
+.issue {
+  margin: auto;
+  width: 200px;
+}
+.issue-img {
+  height: 275px;
+  width: 200px;
+  background: black;
+}

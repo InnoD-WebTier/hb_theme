@@ -1,0 +1,126 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  min-height: 100%;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+.content {
+  max-width: 992px;
+  margin: 0 30px;
+  padding-bottom: 6em;
+}
+.content.issues {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+@media(min-width: 1052px) {
+  .content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.hb-navbar-container {
+  border: none;
+  border-bottom: 1px solid #00aaf2;
+}
+.hb-navbar-nav {
+  text-transform: lowercase;
+}
+.hb-navbar-brand {
+  line-height: inherit;
+  font-weight: bold;
+}
+.navbar-logo-text {
+  left: 15px;
+  color: white;
+}
+@media (min-width: 768px) {
+  .hb-navbar-container {
+    padding: 0 10px;
+  }
+  .navbar-logo-text {
+    position: absolute;
+    bottom: 0;
+  }
+  .navbar-logo-text-mobile {
+    display: none;
+  }
+  .nav.navbar-nav > li > a:hover:after {
+      content: "";
+      top: 100%;
+      left: 50%;
+      position: absolute;
+      border-top: 8px solid #00aaf2;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      margin-left: -5px;
+  }
+}
+.navbar-brand {
+  background: #00aaf2;
+  width: 50px;
+}
+@media (max-width: 768px) {
+  .navbar-brand {
+    width: auto;
+  }
+  .navbar-header {
+    background: #00aaf2;
+  }
+  .navbar-logo-text {
+    display: none;
+  }
+  .navbar-logo-text-mobile {
+    display: inherit;
+    color: white;
+    padding-left: 15px;
+  }
+}
+.footer {
+  width: 100%;
+  height: 6em;
+  background: #00aaf2;
+}
+.footer-mobile {
+  display: none;
+}
+@media(max-width:768px) {
+  .footer-screen {
+    display: none;
+  }
+  .footer-mobile {
+    display: block;
+  }
+}
+.footer-section {
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+.hb-footer-link {
+  margin: 1.25em 0 1.25em 1.75em;
+  font-size: 1.5em; 
+  font-weight: bold;
+  text-transform: lowercase;
+}
+.hb-footer-contact {
+  margin: 3em 0;
+  font-size: 0.8em;
+}
+.hb-footer-nav {
+  margin: 2.5em 2.55em 2.5em 0;
+  font-size: 0.9em;
+}
+.hb-footer-nav > a {
+  margin: 0 3px;
+  color: white;
+  cursor: pointer;
+}
+.nav-padding {
+  height: 50px;
+}

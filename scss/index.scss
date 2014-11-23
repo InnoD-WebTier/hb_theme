@@ -1,0 +1,37 @@
+.main-header {
+  height: 15em;
+  width: 100%;
+  text-align: center;
+}
+.page-title {
+  display: block;
+  margin: 0;
+  padding-top: 0.75em;
+  color: #00aaf2;
+  font-size: 5em;
+  line-height: 1em;
+  text-transform: lowercase;
+}
+.page-description {
+  display: block;
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+@media (min-width: 950px) {
+}
+@media (min-width: 768px) {
+  .post-feed {
+    padding-right: 20px;
+  }
+  .sidebar {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

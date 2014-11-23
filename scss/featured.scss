@@ -1,0 +1,14 @@
+.post.featured {
+  padding: 0 25px 10px 25px;
+  border: 1px solid #00aaf2;
+  border-bottom-width: 5px;
+}
+.post-title.featured {
+  display: inline-block;
+  margin-left: -25px;
+  background: #00aaf2;
+  padding: 5px 10px;
+}
+.post-title.featured > a {
+  color: white;
+}

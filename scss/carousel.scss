@@ -1,0 +1,30 @@
+.carousel-container {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  margin-bottom: 30px;
+  background: #ccc;
+}
+@media (max-width: 768px) {
+  .carousel-container {
+    display: none;
+  }
+}
+.carousel-arrow {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  font-size: 42px;
+  color: white;
+  background: #333;
+  opcaity: 0.7;
+}
+.carousel-arrow.left {
+  top: 145px;
+  left: -10px;
+}
+.carousel-arrow.right {
+  top: 145px;
+  right: -10px;
+}
