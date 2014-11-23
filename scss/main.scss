@@ -14,6 +14,10 @@ body {
   margin: 0 30px;
   padding-bottom: 6em;
 }
+.content.issues {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 @media(min-width: 1052px) {
   .content {
     margin-left: auto;
@@ -260,22 +264,43 @@ body {
 /*-----pagination------------------------------------------------------------*/
 .year-tab {
   display: block;
-  padding: 10px 0;
+  width: 60%;
+  padding: 10px 0;;
   text-align: center;
   font-size: 18px;
+  font-weight: bold;
+  color: #00aaf2;
   border: solid 1px #00aaf2;
   border-right: none;
-  margin: 20px 0;
+  margin: 20px 0 20px 40%;
+}
+.year-tab:hover {
+  text-decoration: none;
+}
+.year-tab.active {
+  color: white;
+  background: #00aaf2;
 }
 .issues-box {
-  display:
+  border: solid 1px #00aaf2;
+  padding: 25px 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-end;
 }
-.article {
-  height: 200px;
-  width: 50%;
-  background: gray;
+.issue-wrapper {
+  width: 49%;
+}
+@media(max-width: 768px) {
+  .issue-wrapper {
+    width: 100%;
+  }
 }
 .issue-title {
+  display: block;
+  margin: 10px 0;
   font-size: 14px;
   color: #00aaf2;
 }
@@ -303,6 +328,15 @@ body {
 
 .post-date {
   font-size: 14px;
+}
+.issue {
+  margin: auto;
+  width: 200px;
+}
+.issue-img {
+  height: 275px;
+  width: 200px;
+  background: black;
 }
 
 .post-footer {
