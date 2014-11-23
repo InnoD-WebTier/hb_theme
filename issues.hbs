@@ -13,10 +13,15 @@
             <div class="row issues-box">
                 {{#foreach issues}}
                 <div class="issue-wrapper">
-                    <div class="issue">
-                        <a class="issue-title" href="{{url}}">{{title}}</a>
-                        <div class="issue-img"></div>
+                  <a class="issue-title" href="{{url}}">
+                    {{#if series}}<span class="issue-series">{{series}}</span>: {{/if}}
+                    {{title}}
+                  </a>
+                  <a href="{{url}}">
+                    <div class="issue-img-container">
+                      <img class="issue-img" src={{image}} />
                     </div>
+                  </a>
                 </div>
                 {{/foreach}}
             </div>

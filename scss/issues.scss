@@ -8,7 +8,14 @@
   color: #00aaf2;
   border: solid 1px #00aaf2;
   border-right: none;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
   margin: 20px 0 20px 40%;
+
+  &:focus {
+    outline: 0;
+  }
+
 }
 .year-tab:hover {
   text-decoration: none;
@@ -17,35 +24,60 @@
   color: white;
   background: #00aaf2;
 }
+
+
 .issues-box {
   border: solid 1px #00aaf2;
-  padding: 25px 15px;
+  border-radius: 3px;
+  padding: 25px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: flex-end;
+  align-content: flex-start;
+  align-items: center;
+
+  min-height: 837px;
+
+  &:before {
+    display: none;
+  }
+
+  &:after {
+    display: none;
+  }
+
+  @media(max-width: 768px) {
+    min-height: initial;
+  }
+
 }
 .issue-wrapper {
-  width: 49%;
-}
-@media(max-width: 768px) {
-  .issue-wrapper {
-    width: 100%;
+  margin: 0 10px 30px 5px;
+  flex: 0 0 250px;
+
+  > a:focus {
+    outline: 0;
   }
+
 }
+
 .issue-title {
   display: block;
-  margin: 10px 0;
+  margin: 10px auto;
   font-size: 14px;
   color: #00aaf2;
 }
-.issue {
-  margin: auto;
-  width: 200px;
+.issue-series {
+  font-weight: bold;
 }
+
+.issue-img-container {
+  height: 323.5px;  /* 1100 divided by 3.8 */
+  margin: 0 auto;
+  text-align: center;
+}
+
 .issue-img {
-  height: 275px;
-  width: 200px;
-  background: black;
+  height: 100%;
 }
