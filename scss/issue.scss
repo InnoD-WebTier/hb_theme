@@ -1,0 +1,15 @@
+.table-contents {
+  border: 1px solid #00aaf2;
+}
+.table-contents > ul {
+  list-style-type: none;
+  margin-before: 0;
+  -webkit-margin-before: 0;
+  margin-after: 0;
+  -webkit-margin-after: 0;
+  padding-start: 0;
+  -webkit-padding-start: 0;
+}
+.table-contents > ul > li > a.article-title {
+  color: black;
+}

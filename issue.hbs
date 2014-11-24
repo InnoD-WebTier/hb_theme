@@ -4,10 +4,17 @@
 <main id="content" class="content issues" role="main">
 
     <div class="row">
-        <div class="col-sm-2 col-md-2 col-lg-2">
-          {{#foreach publish_years}}
-             <a class="year-tab" href="{{@blog.url}}/issues/{{this}}">{{this}}</a>
-          {{/foreach}}
+        <div class="col-sm-2 col-md-2 col-lg-2 table-contents">
+          {{#issue}}
+          <ul>
+            {{#foreach articles}}
+            <li>
+              <a class="article-title" href="{{@blog.url}}/article/{{slug}}">{{title}}</a><br>
+            </li>
+            {{/foreach}}
+          </ul>
+          <a href="{{@blur.url}}/issues/">Back To Issue List</a>
+          {{/issue}}
         </div>
         <div class="col-sm-8 col-md-8 col-lg-8">
             <div class="row issues-box">
@@ -18,16 +25,6 @@
                     </section>
                 </header>
                 <section class="post-content">
-                  {{#issue}}
-                  <ul>
-                    {{#foreach articles}}
-                    <li>
-                      <a href="{{@blog.url}}/article/{{slug}}">{{title}}</a>
-                    </li>
-                    {{/foreach}}
-                  </ul>
-                  <a href="{{@blur.url}}/issues/">Back To Issue List</a>
-                  {{/issue}}
 
                   {{#current_article}}
                     <section class="post-content">
