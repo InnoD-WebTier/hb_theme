@@ -1,15 +1,22 @@
 .table-contents {
-  border: 1px solid #00aaf2;
+  border-right: none;
+  padding: 15px;
 }
-.table-contents > ul {
-  list-style-type: none;
+.table-contents > ol {
+  color: #999;
   margin-before: 0;
   -webkit-margin-before: 0;
   margin-after: 0;
   -webkit-margin-after: 0;
-  padding-start: 0;
-  -webkit-padding-start: 0;
+  padding-start: 15px;
+  -webkit-padding-start: 15px;
 }
-.table-contents > ul > li > a.article-title {
-  color: black;
+.table-contents > ol > li {
+  padding-bottom: 6px;
+}
+.table-contents > ol > li > a.article-title {
+  color: #999;
+}
+.back-issues {
+  margin-top: 10px;
 }

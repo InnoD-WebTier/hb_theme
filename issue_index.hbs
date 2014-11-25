@@ -1,46 +1,47 @@
 {{!< default}}
 
-{{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
+{{! The main content area on the homepage }}
+<main id="content" class="content issues" role="main">
 
-{{! Everything inside the #post tags pulls data from the post }}
+    <div class="row">
+        <article class="{{post_class}}">
 
-<main class="content" role="main">
+            {{#issue}}
+            <ol>
+                {{#foreach articles}}
+                <li>
+                    <a class="article-title" href="{{@blog.url}}/articles/{{slug}}">{{title}}</a><br>
+                </li>
+                {{/foreach}}
+            </ol>
+            <a class="back-issues" href="{{@blur.url}}/issues/">Back To Issue List</a>
+            {{/issue}}
 
-    <article class="{{post_class}}">
+            {{#current_article}}
+            <header class="post-header hb-post-header">
+                <h1 class="post-title hb-post-title">{{title}}</h1>
+                <section class="post-meta">
+                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+                </section>
+            </header>
+            {{/current_article}}
 
-        <header class="post-header">
-            <h1 class="post-title">{{title}}</h1>
-            <section class="post-meta">
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
-            </section>
-        </header>
-
-        <section class="post-content">
-          {{#issue}}
-          <ul>
-            {{#foreach articles}}
-            <li>
-              <a href="{{@blog.url}}/article/{{slug}}">{{title}}</a>
-            </li>
-            {{/foreach}}
-          </ul>
-          <a href="{{@blur.url}}/issues/">Back To Issue List</a>
-          {{/issue}}
-
-          {{#current_article}}
+            {{#current_article}}
             <section class="post-content">
-              {{content}}
+                {{content}}
+                <div class="blue-line"></div>
             </section>
+            {{/current_article}}
 
             <footer class="post-footer">
+
 
             {{! Everything inside the #author tags pulls data from the author }}
             {{#author}}
 
                 {{#if image}}
                 <figure class="author-image">
-                    <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                    <a class="img" href="{{url}}" style="background-image: url({{@blog.url}}{{image}})"><span class="hidden">{{name}}'s Picture</span></a>
                 </figure>
                 {{/if}}
 
@@ -59,30 +60,25 @@
                 </section>
 
             {{/author}}
-          {{/current_article}}
-        </section>
 
-        <footer class="post-footer">
+                <section class="share">
+                    <h4>Share this post</h4>
+                    <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                        <span class="hidden">Twitter</span>
+                    </a>
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                        <span class="hidden">Facebook</span>
+                    </a>
+                    <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                        <span class="hidden">Google+</span>
+                    </a>
+                </section>
 
-            <section class="share">
-                <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class="hidden">Twitter</span>
-                </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                    <span class="hidden">Facebook</span>
-                </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                    <span class="hidden">Google+</span>
-                </a>
-            </section>
-
-        </footer>
-
-    </article>
+            </footer>
+        </article>
+    </div>
 
 </main>
-
