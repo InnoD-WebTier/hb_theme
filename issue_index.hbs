@@ -4,18 +4,25 @@
 <main id="content" class="content issues" role="main">
 
     <div class="row">
-        <article class="{{post_class}}">
-
+        <div class="col-sm-2 col-md-2 col-lg-2">
+          <div class="row">
             {{#issue}}
-            <ol>
-                {{#foreach articles}}
-                <li>
-                    <a class="article-title" href="{{@blog.url}}/articles/{{slug}}">{{title}}</a><br>
-                </li>
-                {{/foreach}}
-            </ol>
-            <a class="back-issues" href="{{@blur.url}}/issues/">Back To Issue List</a>
+            <div class="table-contents">
+                <ol>
+                    {{#foreach articles}}
+                    <li>
+                        <a class="article-title" href="{{@blog.url}}/articles/{{slug}}">{{title}}</a><br>
+                    </li>
+                    {{/foreach}}
+                </ol>
+                <a class="back-issues" href="{{@blur.url}}/issues/">Back To Issue List</a>
+            </div>
             {{/issue}}
+          </div>
+        </div>
+        <div class="col-sm-8 col-md-8 col-lg-8">
+    <div class="row">
+        <article class="{{post_class}}">
 
             {{#current_article}}
             <header class="post-header hb-post-header">
@@ -24,14 +31,11 @@
                     <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
                 </section>
             </header>
-            {{/current_article}}
 
-            {{#current_article}}
             <section class="post-content">
                 {{content}}
                 <div class="blue-line"></div>
             </section>
-            {{/current_article}}
 
             <footer class="post-footer">
 
@@ -76,9 +80,12 @@
                         <span class="hidden">Google+</span>
                     </a>
                 </section>
+            {{/current_article}}
 
             </footer>
         </article>
+    </div>
+        </div>
     </div>
 
 </main>

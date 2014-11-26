@@ -15,7 +15,6 @@
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/slick.css"}}"/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
@@ -40,7 +39,7 @@
                 </a>
             </div>
 
-            <div class="collapse navbar-collapse" id="nav-menu">
+            <div class="collapse navbar-collapse" id="nav-menu" aria-expanded="false" style="height: 1px;">
                 <ul class="nav navbar-nav navbar-right hb-navbar-nav">
                     <li><a href="{{@blog.url}}" id="nav-menu-home">Home</a></li>
                     <li><a href="#" id="nav-menu-about">About</a></li>
