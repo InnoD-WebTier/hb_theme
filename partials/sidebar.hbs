@@ -73,13 +73,11 @@
       
       <div id="sideContainer" style="position: relative; background-color: #F2F6F9; border-radius: 10px; padding: 5px; width: 290px; min-height: 1351px; left: 30%; right: 50%; margin-bottom: 25px;"> 
         <div id="search">
-            <form>
-              <input id="search-field" />
+            <form action="/search">
+              <input type="text" name="search-query" />
               <input type="submit" value="search">
             </form>
-            <section id="results"></section>
         </div>
-        {{!-- search is turned on in default.hbs}}
 
         {{!-- Magazine slot --}}
 

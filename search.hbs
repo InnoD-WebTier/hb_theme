@@ -1,0 +1,35 @@
+{{!< default}}
+
+{{! The main content area on the homepage }}
+<main id="content" class="content" role="main">
+    <div class="row">
+        <div class="col-sm-8 col-md-8 col-lg-8 post-feed">
+            <div id="search">
+                <form>
+                  <input id="search-field" value={{query}}>
+                  <input type="submit" value="search">
+                </form>
+                <section id="results"></section>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 sidebar">
+            <div class="row">
+                {{> "sidebar"}}
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var ghostHunter = $("#search-field").ghostHunter({
+                results         : "#results",
+                onKeyUp         : true,
+            });
+            ghostHunter.loadRSS();
+            if( {{query}} !== '') {
+                ghostHunter.find(ghostHunter.target.val());
+            }
+        });
+    </script>
+
+</main>
