@@ -28,15 +28,21 @@
         }
         defer(function() {
             $(document).ready(function() {
-                console.log("binding");
                 var ghostHunter = $("#search-field").ghostHunter({
                     results         : "#results",
                     onKeyUp         : true,
                 });
                 ghostHunter.loadRSS();
-                if( '{{query}}' !== '') {
-                    ghostHunter.find(ghostHunter.target.val());
-                }
+                function load() {
+                    if (ghostHunter.isInit && ghostHunter.blogData.length > 0) {
+                        if(ghostHunter.target.val()) {
+                            ghostHunter.find(ghostHunter.target.val());
+                        }
+                    } else {
+                        setTimeout(load, 100);
+                    }
+                };
+                load();
             });
         });
     </script>
