@@ -20,15 +20,24 @@
     </div>
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            var ghostHunter = $("#search-field").ghostHunter({
-                results         : "#results",
-                onKeyUp         : true,
+        function defer(func) {
+            if (window.$)
+                func();
+            else
+                setTimeout(function() { defer(func) }, 50);
+        }
+        defer(function() {
+            $(document).ready(function() {
+                console.log("binding");
+                var ghostHunter = $("#search-field").ghostHunter({
+                    results         : "#results",
+                    onKeyUp         : true,
+                });
+                ghostHunter.loadRSS();
+                if( '{{query}}' !== '') {
+                    ghostHunter.find(ghostHunter.target.val());
+                }
             });
-            ghostHunter.loadRSS();
-            if( {{query}} !== '') {
-                ghostHunter.find(ghostHunter.target.val());
-            }
         });
     </script>
 
