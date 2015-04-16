@@ -7,6 +7,7 @@
         <div class="col-sm-2 col-md-2 col-lg-2">
           <div class="row">
             {{#issue}}
+            <a href="{{pdf}}">Download issue as PDF</a>
             <div class="table-contents">
                 <div class="table-contents-title">Table of Contents</div>
                 <ol>
@@ -46,7 +47,7 @@
 
                 {{#if image}}
                 <figure class="author-image">
-                    <a class="img" href="{{url}}" style="background-image: url({{@blog.url}}{{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                    <a class="img" href="{{url}}"><img src="{{image}}" alt="{{name}}'s Picture" /></a>
                 </figure>
                 {{/if}}
 

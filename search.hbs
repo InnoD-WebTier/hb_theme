@@ -1,0 +1,65 @@
+{{!< default}}
+
+{{! The main content area on the homepage }}
+<main id="content" class="content" role="main">
+    <div class="row">
+        <br>
+        <div class="col-sm-8 col-md-8 col-lg-8 post-feed">
+            <div id="search">
+                <!-- <form>
+                  <input id="search-field" value="{{query}}">
+                  <input type="submit" value="search">
+                </form> -->
+
+                <form role="search" action="/search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Tag search" id="search-field" value="{{query}}">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-default" id="nav" value="search">
+                                <span class="fa fa-search">
+                                    <span class="sr-only">Search</span>
+                                </span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+
+                <section id="results"></section>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 sidebar">
+            <div class="row">
+                {{> "sidebar"}}
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function defer(func) {
+            if (window.$)
+                func();
+            else
+                setTimeout(function() { defer(func) }, 50);
+        }
+        defer(function() {
+            $(document).ready(function() {
+                var ghostHunter = $("#search-field").ghostHunter({
+                    results         : "#results",
+                    onKeyUp         : true,
+                });
+                ghostHunter.loadRSS();
+                function load() {
+                    if (ghostHunter.isInit && ghostHunter.blogData.length > 0) {
+                        if(ghostHunter.target.val()) {
+                            ghostHunter.find(ghostHunter.target.val());
+                        }
+                    } else {
+                        setTimeout(load, 100);
+                    }
+                };
+                load();
+            });
+        });
+    </script>
+
+</main>
