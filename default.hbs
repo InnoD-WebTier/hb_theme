@@ -15,16 +15,18 @@
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
     {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.css"}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/slick.css"}}"/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.min.css"}}"/>
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid hb-navbar-container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu">
@@ -36,16 +38,35 @@
                 <a class="navbar-brand hb-navbar-brand" href="{{@blog.url}}">
                     <span class="navbar-logo-text">hb</span>
                     <span class="navbar-logo-text-mobile">hardboiled</span>
+                    <div class="input-group stylish-input-group">
+                    
+                </div>
+
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="nav-menu" aria-expanded="false" style="height: 1px;">
+                <div id="search">
+
+                <form class="navbar-form navbar-right" role="search" action="/search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Tag search" name="search-query">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-default" id="nav" value="search">
+                                <span class="fa fa-search">
+                                    <span class="sr-only">Search</span>
+                                </span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
                 <ul class="nav navbar-nav navbar-right hb-navbar-nav">
-                    <li><a href="{{@blog.url}}" id="nav-menu-home">Home</a></li>
                     <li><a href="#" id="nav-menu-about">About</a></li>
                     <li><a href="{{@blog.url}}/issues/" id="nav-menu-issues">Issues</a></li>
-                </ul>
+                </ul> 
             </div>
+            </div>
+
         </div>
     </nav>
     <div class="nav-padding"></div>
