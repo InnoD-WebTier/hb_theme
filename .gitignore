@@ -7,7 +7,7 @@ b-cov
 *.pid
 *.gz
 *.swp
-assets/css/*
+assets/css/style.css
 
 pids
 logs
